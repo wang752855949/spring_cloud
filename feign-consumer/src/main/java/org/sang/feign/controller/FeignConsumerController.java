@@ -36,7 +36,7 @@ public class FeignConsumerController {
 	
 	@RequestMapping("/hello2")
 	public Book hello2() throws Exception {
-		Book book = service2.hello(URLEncoder.encode("三國演義", "UTF-8"), URLEncoder.encode("罗贯中", "UTF-8"), 33);
+		Book book = service2.hello(URLEncoder.encode("三国演义", "UTF-8"), URLEncoder.encode("罗贯中", "UTF-8"), 33);
 		System.err.println(book);
 		return book;
 	}
@@ -44,7 +44,7 @@ public class FeignConsumerController {
 	@RequestMapping("hello3")
 	public String hello3() {
 		Book book = new Book();
-		book.setName("紅樓夢")
+		book.setName("红楼梦")
 			.setPrice(40)
 			.setAuthor("曹雪芹");
 		return service2.hello(book);
